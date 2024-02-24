@@ -3,7 +3,7 @@ def input_profile():
 
     age = int(input("Enter your age: "))
     weight = float(input("Enter your weight in kilograms: "))
-    height = float(input("Enter your height in meters: "))
+    height = float(input("Enter your height in centimeters: "))
 
     print("\nFitness Level:")
     print("1. Beginner")
