@@ -1,5 +1,5 @@
-# RepIt
-Personal AI Trainer
+# RepIt - Personal AI Trainer
+
 Welcome to RepIt, your personal AI trainer utilizing computer vision technology to track your reps and provide real-time feedback on your form. With RepIt, you can enhance your workout experience, optimize your performance, and achieve your fitness goals effectively.
 
 To get started with RepIt, follow these simple steps:
