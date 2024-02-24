@@ -1,0 +1,13 @@
+.app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: inherit;
+  position: relative;
+  background-image: radial-gradient(#a7a7a73b 7%, #ffffff00 0%), linear-gradient(#fdfdfd 0%, #fdfdfd 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: 50px 50px, cover;
+}
