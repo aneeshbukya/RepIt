@@ -86,7 +86,7 @@ export class PoseNetComponent implements OnInit, OnDestroy {
         s.fill(255, 0, 0);
 
         if (this.pose) {
-          for (let i = 0; i < this.pose.keypoints.length; i++) {
+          /*for (let i = 0; i < this.pose.keypoints.length; i++) {
             s.fill(0, 255, 0);
             s.ellipse(
               this.pose.keypoints[i].position.x,
@@ -94,7 +94,7 @@ export class PoseNetComponent implements OnInit, OnDestroy {
               16,
               16
             );
-          }
+          }*/
 
           for (let i = 0; i < this.skeleton1.length; i++) {
             let a = this.skeleton1[i][0];

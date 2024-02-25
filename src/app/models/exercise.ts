@@ -17,6 +17,22 @@ export class Exercise {
     this.count = count;
     this.weight = weight;
 
-    this.instruction = "Do 10 push ups!";
+    switch(type){
+      case ExerciseType.CURLS:
+        this.instruction = `Do ${count} both arm curls!`
+        break;
+      case ExerciseType.PUSH_UPS:
+        this.instruction = `Do ${count} push ups!`
+        break;
+      case ExerciseType.LATERAL_RAISES:
+        this.instruction = `Do ${count} lateral raises!`
+        break;
+      case ExerciseType.SHOULDER_PRESSES:
+        this.instruction = `Do ${count} shoulder presses!`
+        break;
+      case ExerciseType.SQUATS:
+        this.instruction = `Do ${count} squats!`
+        break;
+    }
   }
 }
