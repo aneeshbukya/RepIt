@@ -32,11 +32,11 @@ export class ExerciseCardComponent implements OnInit {
       case ExerciseType.CURLS:
         return 'assets/curl-icon.png';
       case ExerciseType.LATERAL_RAISES:
-        return '';
+        return 'assets/lateral-icon.png';
       case ExerciseType.SHOULDER_PRESSES:
-        return '';
+        return 'assets/shoulder-icon.png';
       case ExerciseType.SQUATS:
-        return '';
+        return 'assets/squat-icon.png';
     }
 
     return "";
