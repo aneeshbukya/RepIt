@@ -1,0 +1,39 @@
+<div>
+  <h2>Welcome to RepIt! Let's set up your profile.</h2>
+  <form (ngSubmit)="saveProfile()">
+    <label>
+      Age:
+      <input type="number" [(ngModel)]="age" name="age" required />
+    </label>
+    <br>
+    <label>
+      Weight (kg):
+      <input type="number" step="0.01" [(ngModel)]="weight" name="weight" required />
+    </label>
+    <br>
+    <label>
+      Height (cm):
+      <input type="number" step="0.01" [(ngModel)]="height" name="height" required />
+    </label>
+    <br>
+    <label>
+      Fitness Level:
+      <select [(ngModel)]="fitnessLevel" name="fitnessLevel" required >
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </label>
+    <br>
+    <label>
+      Fitness Goal:
+      <select [(ngModel)]="fitnessGoal" name="fitnessGoal" required>
+        <option value="Lose Weight">Lose Weight</option>
+        <option value="Gain Muscle">Gain Muscle</option>
+        <option value="Overall Fitness">Overall Fitness</option>
+      </select>
+    </label>
+    <br>
+    <button type="submit">Save Profile</button>
+  </form>
+</div>

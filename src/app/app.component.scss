@@ -1,0 +1,60 @@
+:host {
+  height: 100%;
+  display: flex;
+}
+
+.app {
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  position: relative;
+  background-image: radial-gradient(#a7a7a73b 7%, #ffffff00 0%), linear-gradient(#F1F1F1 0%, #F1F1F1 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: 50px 50px, cover;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+.router {
+  width: 100%;
+  margin: 1rem;
+  margin-bottom: 5rem;
+}
+
+.tab-group {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+::ng-deep ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+
+::ng-deep ::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::ng-deep ::-webkit-scrollbar-thumb {
+  background-color: #cccacc;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+@media all and (display-mode: fullscreen) {
+  ::ng-deep ::-webkit-scrollbar {
+    background: black;
+  }
+
+  ::ng-deep ::-webkit-scrollbar-thumb {
+    background-color: #232323;
+  }
+}
