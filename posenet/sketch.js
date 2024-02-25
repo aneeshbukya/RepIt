@@ -1,3 +1,6 @@
+// import { exercise } from './exercises/exercise.js';
+// import { lCurlUp } from './exercises/lCurlup.js';
+// import { rCurlUp } from './exercises/rCurlUp.js';
 
 let video;
 let poseNet; // Ensure this matches the casing and spelling used in ml5 documentation
@@ -5,9 +8,10 @@ let poseNet; // Ensure this matches the casing and spelling used in ml5 document
 let pose;
 let skeleton;
 
-let brain;
-
 let repcount, repstate;
+
+let current_exercise;
+
 
 function setup() {
   createCanvas(640, 480);
@@ -19,17 +23,27 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose', gotPoses);
 
-  /*let options = {
-    inputs: 34,
-    outputs: 2,
-    task: 'classification',
-    debug: true,
-  }
-  brain = ml5.neuralNetwork()*/
 
-  repcount = 0;
-  repstate = 'down';
+  current_exercise = null;
+
+  // Create buttons for each exercise
+  createExerciseButton('Push Up', pushUp, 19);
+  createExerciseButton('Lateral Raise', lateralRaise, 140);
+  createExerciseButton('Squat', squat, 261);
+  createExerciseButton('Shoulder Press', shoulderPress, 382);
+  createExerciseButton('Left Curl Up', lCurlUp, 503);
+  createExerciseButton('Right Curl Up', rCurlUp, 624);
+  createExerciseButton('Both Curl Up', bCurlUp, 745);
 }
+
+function createExerciseButton(name, exerciseClass, xPos) {
+  let btn = createButton(name);
+  btn.position(xPos, height + 20);
+  btn.mousePressed(() => {
+    current_exercise = new exerciseClass();
+  });
+}
+
 
 function gotPoses(poses){
   //console.log(poses);
@@ -66,7 +80,11 @@ function draw() {
 
     pop();
 
-    let rangle, langle = 0;;
+    if(current_exercise != null){
+      current_exercise.checkpose(pose);
+    }
+
+    /*let rangle, langle = 0;;
 
     if(pose.rightShoulder.confidence > .4 && pose.rightElbow.confidence > .4  && pose.rightWrist.confidence > .4 ){
       let elbowWrist = createVector(pose.rightWrist.x - pose.rightElbow.x, pose.rightWrist.y - pose.rightElbow.y);
@@ -96,9 +114,7 @@ function draw() {
     }
 
     if(langle != 0 && Math.abs(langle) < 1){
-      textSize(72);
-      textAlign(CENTER, CENTER);
-      text('REPUP', width/2, height/2);
-    }
+      
+    }*/
   }
 }
