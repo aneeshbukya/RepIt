@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Exercise, ExerciseType } from '../models/exercise';
 import { ExerciseService } from '../excersise.service';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -17,7 +18,7 @@ export class HomepageComponent {
   fitnessLevel!: string;
   fitnessGoal!: string;
 
-  constructor(private exerciseService: ExerciseService) {}
+  constructor(private exerciseService: ExerciseService, private router: Router) {}
 
   saveProfile(): void {
     // Display the collected information
@@ -28,15 +29,9 @@ export class HomepageComponent {
     console.log(`Fitness Level: ${this.fitnessLevel}`);
     console.log(`Fitness Goal: ${this.fitnessGoal}`);
 
-    if (!this.age) {
-      this.age = 20;
-      this.weight = 20;
-      this.height = 10;
-      this.fitnessLevel = 'Intermediate';
-      this.fitnessGoal = 'Lose Weight';
-    }
-
     this.exerciseService.setExercises(this.recommendWorkout());
+
+    this.router.navigateByUrl("/workout");
   }
 
   // Example usage:
@@ -49,8 +44,8 @@ export class HomepageComponent {
   ];
   storeWorkouts(
     workouts: Exercise[],
-    weightToLift: number,
-    repCount: number
+    repCount: number,
+    weightToLift: number
   ): Exercise[] {
     this.exercises.forEach((exercise) => {
       for (let i = 0; i < 3; i++) {

@@ -32,4 +32,8 @@ export class WorkoutProgressComponent implements OnInit, OnDestroy {
   skipExercise(exercise: Exercise) {
     this.exerciseService.removeExercise(exercise);
   }
+
+  test() {
+    this.exerciseService.decrementCount();
+  }
 }
