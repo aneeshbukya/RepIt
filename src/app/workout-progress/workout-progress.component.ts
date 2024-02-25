@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ExerciseCardComponent } from '../exercise-card/exercise-card.component';
 import { ExerciseService } from '../excersise.service';
 import { Exercise, ExerciseType } from '../models/exercise';
@@ -13,11 +13,20 @@ import { RouterModule } from '@angular/router';
   templateUrl: './workout-progress.component.html',
   styleUrl: './workout-progress.component.scss',
 })
-export class WorkoutProgressComponent {
+export class WorkoutProgressComponent implements OnInit, OnDestroy {
   exercises: Exercise[] = [];
+
 
   constructor(private exerciseService: ExerciseService) {
     this.exercises = exerciseService.getExercises();
+  }
+
+  ngOnInit(): void {
+    this.exerciseService.startTiming();
+  }
+
+  ngOnDestroy(): void {
+    this.exerciseService.stopTiming();
   }
 
   skipExercise(exercise: Exercise) {

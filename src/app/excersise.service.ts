@@ -50,4 +50,19 @@ export class ExerciseService {
       this.removeExercise(exercise);
     }
   }
+
+  private startTime: number = 0;
+  private endTime: number = 0;
+
+  startTiming(): void {
+    this.startTime = Date.now();
+  }
+
+  stopTiming(): void {
+    this.endTime = Date.now();
+  }
+
+  getDurationInSeconds(): number {
+    return (this.endTime - this.startTime) / 1000;
+  }
 }
