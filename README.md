@@ -15,3 +15,11 @@ To get started with RepIt, follow these simple steps:
 5.) Receive Feedback: As you perform each exercise, RepIt will analyze your movements and provide feedback on your form, helping you maintain proper technique and prevent injuries.
 
 6.) Track Your Progress: Monitor your progress within the app, including workout completion, form improvement, and overall performance metrics.
+
+
+Exercises to support;
+- curls (left and right)
+- push ups
+- lateral raises
+- shoulder press
+- squats
