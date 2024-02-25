@@ -18,7 +18,7 @@ To get started with RepIt, follow these simple steps:
 
 
 Exercises to support;
-- curls (left and right)
+- curls (left and right and both)
 - push ups
 - lateral raises
 - shoulder press
