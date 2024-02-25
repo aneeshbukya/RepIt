@@ -3,7 +3,6 @@
     <h2 class="title">Workout Progress</h2>
     <hr class="rounded">
   </div>
-  <button (click)="test()">test</button>
   @for (exercise of exercises; track exercise; let i = $index) {
     <app-exercise-card (skipExercise)="skipExercise($event)" [exercise]="exercise" [activeExercise]="i == 0"></app-exercise-card>
   }

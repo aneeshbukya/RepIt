@@ -35,7 +35,16 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/posenet/exercises/exercise.js",
+              "src/assets/posenet/exercises/lCurlUp.js",
+              "src/assets/posenet/exercises/rCurlUp.js",
+              "src/assets/posenet/exercises/bCurlUp.js",
+              "src/assets/posenet/exercises/squat.js",
+              "src/assets/posenet/exercises/lateralRaise.js",
+              "src/assets/posenet/exercises/shoulderPress.js",
+              "src/assets/posenet/exercises/pushUp.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -23,8 +23,4 @@ export class WorkoutProgressComponent {
   skipExercise(exercise: Exercise) {
     this.exerciseService.removeExercise(exercise);
   }
-
-  test() {
-    this.exerciseService.decrementCount();
-  }
 }
