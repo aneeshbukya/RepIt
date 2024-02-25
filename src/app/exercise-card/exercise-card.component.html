@@ -1,0 +1,18 @@
+<div class="container" [class.active-exercise]="activeExercise">
+  <div class="layout">
+    <div>
+      <h3 class="title">{{exercise.type}}</h3>
+      <small class="subtitle">{{exercise.instruction}}</small>
+    </div>
+    <div class="image-container">
+      <img class="image" [src]="getImageURL()">
+    </div>
+    <div class="right-container">
+      <div class=count [class.count-disabled]="!activeExercise">
+        <p>{{exercise.count}}</p>
+      </div>
+      <button (click)="skip()" class="skip" mat-flat-button [disabled]="!activeExercise">Skip</button>
+    </div>
+  </div>
+  <div class="progress-bar" [ngStyle]="{'width.%': progress * 100}"></div>
+</div>

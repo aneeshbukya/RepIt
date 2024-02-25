@@ -1,0 +1,91 @@
+.title {
+  margin: 0;
+  margin-bottom: .25rem;
+  font-weight: normal;
+}
+
+.subtitle {
+  margin-top: 2rem;
+}
+
+.container {
+  position: relative;
+  min-width: 300px;
+  padding: 1rem;
+  background-color: #FFFBFE;
+  border: 1px solid #79747e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.layout > * {
+  z-index: 1;
+}
+
+.active-exercise {
+  background-color: #F5FFF6 !important;
+  border-color: #bbcaba !important;
+}
+
+.image-container {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.image {
+  margin: auto;
+  width: 100%;
+  max-width: 150px;
+  max-height: 80px;
+  height: auto;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #E7E0EC;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.count p {
+  margin: auto;
+}
+
+.count-disabled {
+  background-color: #F3EDF5;
+  color: #79767A;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #C7FFCC;
+}
+
+:host ::ng-deep .mdc-button {
+  border-radius: 50px !important;
+}
+
+:host ::ng-deep .mdc-button:not(:disabled) {
+  background: #625B71 !important;
+  color: white;
+}
