@@ -76,25 +76,25 @@ export class HomepageComponent {
     } else if (this.fitnessGoal === 'Gain Muscle'){
       repCount = 8; 
       if (this.fitnessLevel === 'Beginner') {
-        weightToLift = 20; // Lift 20 lb for beginners aiming to lose weight
+        weightToLift = 20; // Lift 20 lb for beginners aiming to gain muscle 
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       } else if (this.fitnessLevel === 'Intermediate'){
-        weightToLift = 40; // Lift 40 lb for Intermediate aiming to lose weight
+        weightToLift = 40; // Lift 40 lb for Intermediate aiming to gain muscle 
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       } else if (this.fitnessLevel === 'Advanced'){
-        weightToLift = 60; // Lift 60 lb for Advanced aiming to lose weight
+        weightToLift = 60; // Lift 60 lb for Advanced aiming to gain muscle 
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       }
     } else{ // overall fitness
       repCount = 10; 
       if (this.fitnessLevel === 'Beginner') {
-        weightToLift = 20; // Lift 20 lb for beginners aiming to lose weight
+        weightToLift = 20; // Lift 20 lb for beginners aiming to improve fitness
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       } else if (this.fitnessLevel === 'Intermediate'){
-        weightToLift = 40; // Lift 40 lb for Intermediate aiming to lose weight
+        weightToLift = 40; // Lift 40 lb for Intermediate aiming to improve fitness 
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       } else if (this.fitnessLevel === 'Advanced'){
-        weightToLift = 60; // Lift 60 lb for Advanced aiming to lose weight
+        weightToLift = 60; // Lift 60 lb for Advanced aiming to improve fitness 
         workouts = this.storeWorkouts(workouts,repCount,weightToLift);
       }
     } 
